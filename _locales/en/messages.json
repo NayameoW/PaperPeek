@@ -1,0 +1,5 @@
+{
+  "extName": { "message": "PaperPeek – Paper Reader with Hover Previews" },
+  "extDesc": { "message": "Opens PDFs in PaperPeek automatically: two-page reading with hover previews of citations, figures and equations." },
+  "actionTitle": { "message": "PaperPeek is on: click to pause taking over PDFs" }
+}

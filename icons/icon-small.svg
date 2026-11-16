@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <!-- icon.svg 的 16/32px 版：图块铺满画布，所有边缘落在 8 单位网格上（16px 时正好 1 像素），没有阴影。 -->
+  <defs>
+    <linearGradient id="pv-tile-s" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4a88f2"/>
+      <stop offset="1" stop-color="#2860cc"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="24" fill="url(#pv-tile-s)"/>
+  <g fill="#fff">
+    <rect x="16" y="32" width="40" height="64" rx="6"/>
+    <rect x="72" y="32" width="40" height="64" rx="6"/>
+  </g>
+  <g fill="#2f6fde">
+    <rect x="24" y="40" width="24" height="8"/>
+    <rect x="24" y="56" width="24" height="8"/>
+    <rect x="24" y="72" width="16" height="8"/>
+    <rect x="80" y="40" width="24" height="8"/>
+    <rect x="80" y="72" width="16" height="8"/>
+  </g>
+  <rect x="80" y="56" width="24" height="8" fill="#ff9f0a"/>
+</svg>

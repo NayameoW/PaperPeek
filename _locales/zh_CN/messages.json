@@ -1,0 +1,5 @@
+{
+  "extName": { "message": "PaperPeek 论文阅读器：悬停预览引用、图和公式" },
+  "extDesc": { "message": "打开 PDF 时自动转到 PaperPeek：双页阅读，悬停预览引用、图和公式。" },
+  "actionTitle": { "message": "PaperPeek 已开启：点击可暂停自动接管 PDF" }
+}
