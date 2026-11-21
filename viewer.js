@@ -82,7 +82,13 @@ async function openDocument(src, label) {
     wasmUrl: BASE + 'wasm/',
     iccUrl: BASE + 'iccs/',
   });
-  task.onProgress = ({ loaded, total }) => { if (seq === openSeq && total) setProgress(Math.min(0.98, loaded / total)); };
+  // 打开前封顶 98%（拿到数据后还要解析）。打开后照实显示：插件里 pdf.js 会分段加载，文档打开后还在后台下载剩下的部分；
+  // 就算已经下完，最后一个进度事件也可能比「打开」晚到。到 100% 就收起，真正的结束信号见下面的 getDownloadInfo。
+  let opened = false;
+  task.onProgress = ({ loaded, total }) => {
+    if (seq !== openSeq || !total) return;
+    setProgress(opened ? loaded / total : Math.min(0.98, loaded / total));
+  };
   let doc;
   try {
     doc = await task.promise;
@@ -102,7 +108,10 @@ async function openDocument(src, label) {
   viewer.setDocument(doc);
   linkService.setDocument(doc, null);
   prev?.destroy().catch(() => {});
-  setProgress(null);
+  // 全文下载完才返回（整份下载的立刻返回），之后收起进度条；出错也收起，免得卡住
+  opened = true;
+  const hideProgress = () => { if (seq === openSeq) setProgress(null); };
+  doc.getDownloadInfo().then(hideProgress, hideProgress);
   document.body.classList.add('has-doc');
   $('pageCount').textContent = '/ ' + doc.numPages;
   $('pageInput').value = '1';
