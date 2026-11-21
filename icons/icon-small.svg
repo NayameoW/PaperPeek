@@ -1,22 +1,21 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-  <!-- icon.svg 的 16/32px 版：图块铺满画布，所有边缘落在 8 单位网格上（16px 时正好 1 像素），没有阴影。 -->
+  <!-- icon.svg 的 16/32px 版：铺满画布，横竖边落在 8 单位网格上（16px 时正好 1 像素），纯色无渐变。
+       文字行比大图稍亮一点，16px 时才看得出来。 -->
   <defs>
-    <linearGradient id="pv-tile-s" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#4a88f2"/>
-      <stop offset="1" stop-color="#2860cc"/>
-    </linearGradient>
+    <path id="pp-ear-s" d="M8 64 V44 C8 30 10 16 15.5 6.5 C17.6 3 22 2.4 25 5 L64 44 Z"/>
   </defs>
-  <rect width="128" height="128" rx="24" fill="url(#pv-tile-s)"/>
-  <g fill="#fff">
-    <rect x="16" y="32" width="40" height="64" rx="6"/>
-    <rect x="72" y="32" width="40" height="64" rx="6"/>
+  <g fill="#344e4b">
+    <use href="#pp-ear-s"/>
+    <use href="#pp-ear-s" transform="translate(128 0) scale(-1 1)"/>
+    <rect x="8" y="40" width="112" height="88" rx="24"/>
   </g>
-  <g fill="#2f6fde">
-    <rect x="24" y="40" width="24" height="8"/>
-    <rect x="24" y="56" width="24" height="8"/>
-    <rect x="24" y="72" width="16" height="8"/>
-    <rect x="80" y="40" width="24" height="8"/>
-    <rect x="80" y="72" width="16" height="8"/>
+  <g fill="#f5e6cc">
+    <path id="pp-inner-s" d="M16 46 C16 35 17.5 25 21 16.5 L48 40 C37 41 26 43 16 46 Z"/>
+    <use href="#pp-inner-s" transform="translate(128 0) scale(-1 1)"/>
   </g>
-  <rect x="80" y="56" width="24" height="8" fill="#ff9f0a"/>
+  <g fill="#5d837e">
+    <rect x="32" y="64" width="64" height="8"/>
+    <rect x="32" y="80" width="64" height="8"/>
+    <rect x="32" y="96" width="40" height="8"/>
+  </g>
 </svg>

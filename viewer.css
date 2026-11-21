@@ -6,8 +6,8 @@
   --line: #d5d7dc;
   --text: #1f2328;
   --muted: #6b7280;
-  --accent: #2f6fde;
-  --accent-soft: #e4edfc;
+  --accent: #344e4b;        /* 石板青，和图标主色一致 */
+  --accent-soft: #e2ecea;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 13px;
   color: var(--text);
@@ -40,8 +40,8 @@ button[aria-pressed="true"] { background: var(--accent-soft) !important; border-
 .seg button { border-radius: 0 !important; margin-left: -1px; }
 .seg button:first-child { border-radius: 6px 0 0 6px !important; margin-left: 0; }
 .seg button:last-child { border-radius: 0 6px 6px 0 !important; }
-.seg button[aria-checked="true"] { background: var(--accent); border-color: var(--accent); color: #fff; position: relative; z-index: 1; }
-.seg button[aria-checked="true"]:hover { background: var(--accent); }
+#toolbar .seg button[aria-checked="true"] { background: var(--accent); border-color: var(--accent); color: #fff; position: relative; z-index: 1; }
+#toolbar .seg button[aria-checked="true"]:hover { background: var(--accent); }
 #pageInput { width: 46px; text-align: right; padding: 0 6px !important; }
 #pageCount { color: var(--muted); min-width: 34px; white-space: nowrap; }
 #progress { position: absolute; left: 0; right: 0; bottom: -2px; height: 2px; pointer-events: none; }
@@ -92,7 +92,7 @@ button[aria-pressed="true"] { background: var(--accent-soft) !important; border-
 body.with-sidebar #viewerContainer { left: var(--side-w); }
 .pdfViewer .page { box-shadow: 0 1px 4px rgba(0,0,0,.18); background-clip: content-box; }
 /* 内部链接悬停时给一点反馈 */
-.annotationLayer .linkAnnotation > a:hover { background: rgba(47,111,222,.16); box-shadow: 0 0 0 1px rgba(47,111,222,.35); opacity: 1; }
+.annotationLayer .linkAnnotation > a:hover { background: rgba(74,110,106,.16); box-shadow: 0 0 0 1px rgba(74,110,106,.4); opacity: 1; }
 
 .pv-flash {
   position: absolute; pointer-events: none; z-index: 5; border-radius: 3px;
@@ -108,7 +108,7 @@ body.has-doc #welcome { display: none; }
 .welcome-logo { display: block; width: 72px; height: 72px; margin: 0 auto 18px; }
 .welcome-title { font-size: 22px; color: var(--text); margin-bottom: 8px; }
 #dropOverlay {
-  position: absolute; inset: 0; z-index: 60; background: rgba(47,111,222,.14);
+  position: absolute; inset: 0; z-index: 60; background: rgba(52,78,75,.12);
   border: 3px dashed var(--accent); display: flex; align-items: center; justify-content: center;
   font-size: 22px; color: var(--accent); pointer-events: none;
 }

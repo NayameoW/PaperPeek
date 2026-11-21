@@ -1,29 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-  <!-- PaperPeek：两页并排（双页阅读），右页琥珀色的一行是可悬停预览的引用链接。
-       48/128px 和网页里用这一版；16/32px 用 icon-small.svg（对齐像素网格、去掉阴影）。 -->
+  <!-- PaperPeek：长了猫耳朵的扁平文档（Paper + 偷看的猫 = Peek）。
+       48/128px 和网页里用这一版；16/32px 用 icon-small.svg（铺满画布、对齐像素网格）。
+       主色 #344E4B（石板青），耳内 #F5E6CC（暖奶油），文字行 #4A6E6A。 -->
   <defs>
-    <linearGradient id="pv-tile" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#4a88f2"/>
-      <stop offset="1" stop-color="#2860cc"/>
+    <linearGradient id="pp-body" gradientUnits="userSpaceOnUse" x1="0" y1="4" x2="0" y2="120">
+      <stop offset="0" stop-color="#3a5753"/>
+      <stop offset="1" stop-color="#2f4744"/>
     </linearGradient>
+    <path id="pp-ear" d="M14 54 V38 C14 26 17 16 22.5 8.5 C25 5.2 29.6 4.6 32.6 7.2 L64 34 Z"/>
   </defs>
-  <rect x="8" y="8" width="112" height="112" rx="24" fill="url(#pv-tile)"/>
-  <g fill="#1b4aa6">
-    <rect x="20" y="32" width="36" height="64" rx="6"/>
-    <rect x="72" y="32" width="36" height="64" rx="6"/>
+  <g fill="url(#pp-body)">
+    <use href="#pp-ear"/>
+    <use href="#pp-ear" transform="translate(128 0) scale(-1 1)"/>
+    <rect x="14" y="30" width="100" height="90" rx="22"/>
   </g>
-  <g fill="#fff">
-    <rect x="20" y="28" width="36" height="64" rx="6"/>
-    <rect x="72" y="28" width="36" height="64" rx="6"/>
+  <g fill="#f5e6cc">
+    <path id="pp-inner" d="M23 35 C23 28 24.6 21.6 27.6 16.4 C28.7 14.6 30.8 14.3 32.3 15.6 L50 31 C40 31.5 31 33 23 35 Z"/>
+    <use href="#pp-inner" transform="translate(128 0) scale(-1 1)"/>
   </g>
-  <g fill="#2f6fde">
-    <rect x="26" y="38" width="24" height="6" rx="3"/>
-    <rect x="26" y="51" width="24" height="6" rx="3"/>
-    <rect x="26" y="64" width="24" height="6" rx="3"/>
-    <rect x="26" y="77" width="14" height="6" rx="3"/>
-    <rect x="78" y="38" width="24" height="6" rx="3"/>
-    <rect x="78" y="64" width="24" height="6" rx="3"/>
-    <rect x="78" y="77" width="14" height="6" rx="3"/>
+  <g fill="#4a6e6a">
+    <rect x="34" y="58" width="60" height="8" rx="4"/>
+    <rect x="34" y="74" width="60" height="8" rx="4"/>
+    <rect x="34" y="90" width="38" height="8" rx="4"/>
   </g>
-  <rect x="78" y="51" width="24" height="6" rx="3" fill="#ff9f0a"/>
 </svg>

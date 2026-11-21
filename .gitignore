@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Claude Code 本地设置（launch.json 保留）
+.claude/settings.local.json
+
+# 打包产物
+*.zip
+*.crx
+*.pem
